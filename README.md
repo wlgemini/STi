@@ -1,2 +1,2 @@
 # STi
-swift template for iOS app
+Swift template for iOS app.
