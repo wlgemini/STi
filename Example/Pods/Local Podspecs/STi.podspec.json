@@ -1,0 +1,40 @@
+{
+  "name": "STi",
+  "version": "1.0.0",
+  "summary": "Swift template for iOS app.",
+  "homepage": "https://github.com/wlgemini/STi",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "wlgemini": "wangluguang@live.com"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source": {
+    "git": "https://github.com/wlgemini/STi.git",
+    "tag": "1.0.0"
+  },
+  "source_files": "STi/Classes/**/*",
+  "swift_version": "5.0",
+  "frameworks": "UIKit",
+  "dependencies": {
+    "Alamofire": [
+
+    ],
+    "Driftwood": [
+
+    ],
+    "Kingfisher": [
+
+    ],
+    "SwiftyNavigationBar": [
+
+    ],
+    "PKHUD": [
+
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+PODS:
+  - Alamofire (4.8.2)
+  - Driftwood (5.1.0)
+  - Kingfisher (4.10.1)
+  - PKHUD (5.2.1)
+  - STi (1.0.0):
+    - Alamofire
+    - Driftwood
+    - Kingfisher
+    - PKHUD
+    - SwiftyNavigationBar
+  - SwiftyNavigationBar (1.0.8)
+
+DEPENDENCIES:
+  - STi (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Driftwood
+    - Kingfisher
+    - PKHUD
+    - SwiftyNavigationBar
+
+EXTERNAL SOURCES:
+  STi:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Driftwood: a9ddb483e17fce96090f03f658e5b4504fd2e802
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  PKHUD: 4e6162c4c39ac367c6934e9855c6b4762ee16256
+  STi: 86e7b4d5d5b57566f8885ba9416a17d6bceee524
+  SwiftyNavigationBar: 0a1eb0938ff3bbe17974d799d5bd4a2ad17bbac9
+
+PODFILE CHECKSUM: d8881aae1f743b2acba6b668eb2dcd4d1f23daf5
+
+COCOAPODS: 1.6.1

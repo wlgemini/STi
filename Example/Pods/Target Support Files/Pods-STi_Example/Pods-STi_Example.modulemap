@@ -1,0 +1,6 @@
+framework module Pods_STi_Example {
+  umbrella header "Pods-STi_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module STi {
+  umbrella header "STi-umbrella.h"
+
+  export *
+  module * { export * }
+}
