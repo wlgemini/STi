@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.frameworks              = "UIKit"
   
   s.dependency              "Alamofire"
-  s.dependency              "Driftwood"
+  s.dependency              "DriftwoodHandily"
   s.dependency              "Kingfisher"
   s.dependency              "SwiftyNavigationBar"
   s.dependency              "PKHUD"

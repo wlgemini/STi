@@ -1,5 +1,5 @@
 //
-//  Driftwood
+//  DriftwoodHandily
 //
 //  Copyright (c) 2018-Present wlgemini <wangluguang@live.com>.
 //
@@ -22,58 +22,64 @@
 //  SOFTWARE.
 
 
-#if os(iOS) || os(tvOS)
-import UIKit
+/// ConstraintAttributeX
+public enum ConstraintAttributeX {
+    
+    case superview
+    
+    case left(ConstraintItem)
+    
+    case right(ConstraintItem)
+    
+    case leading(ConstraintItem)
+    
+    case trailing(ConstraintItem)
+    
+    case centerX(ConstraintItem)
+    
+    #if os(iOS) || os(tvOS)
+    case leftMargin(ConstraintItem)
+    
+    case rightMargin(ConstraintItem)
+    
+    case leadingMargin(ConstraintItem)
+    
+    case trailingMargin(ConstraintItem)
+    
+    case centerXWithinMargins(ConstraintItem)
+    #endif
+}
 
 
-/// View
-public typealias View = UIView
+/// ConstraintAttributeY
+public enum ConstraintAttributeY {
+    
+    case superview
+    
+    case top(ConstraintItem)
+    
+    case bottom(ConstraintItem)
+    
+    case centerY(ConstraintItem)
+    
+    case lastBaseline(ConstraintItem)
+    
+    case firstBaseline(ConstraintItem)
+    
+    #if os(iOS) || os(tvOS)
+    case topMargin(ConstraintItem)
+    
+    case bottomMargin(ConstraintItem)
+    
+    case centerYWithinMargins(ConstraintItem)
+    #endif
+}
 
 
-/// LayoutGuide
-@available(iOS 9.0, *)
-public typealias LayoutGuide = UILayoutGuide
-
-
-/// Relation
-public typealias Relation = NSLayoutConstraint.Relation
-
-
-/// Priority
-public typealias Priority = UILayoutPriority
-
-
-/// Attribute
-typealias Attribute = NSLayoutConstraint.Attribute
-
-
-/// EdgeInsets
-public typealias EdgeInsets = UIEdgeInsets
-#else
-import AppKit
-
-
-/// View
-public typealias View = NSView
-
-
-/// LayoutGuide
-@available(macOS 10.11, *)
-public typealias LayoutGuide = NSLayoutGuide
-
-
-/// Relation
-public typealias Relation = NSLayoutConstraint.Relation
-
-
-/// Priority
-public typealias Priority = NSLayoutConstraint.Priority
-
-
-/// Attribute
-typealias Attribute = NSLayoutConstraint.Attribute
-
-
-/// EdgeInsets
-public typealias EdgeInsets = NSEdgeInsets
-#endif
+/// ConstraintAttributeSize
+public enum ConstraintAttributeSize {
+    
+    case width(ConstraintItem)
+    
+    case height(ConstraintItem)
+}

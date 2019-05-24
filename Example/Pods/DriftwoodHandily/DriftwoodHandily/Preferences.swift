@@ -1,5 +1,5 @@
 //
-//  Driftwood
+//  DriftwoodHandily
 //
 //  Copyright (c) 2018-Present wlgemini <wangluguang@live.com>.
 //
@@ -22,26 +22,28 @@
 //  SOFTWARE.
 
 
-/// LayoutGuide (ConstraintItem)
-@available(iOS 9.0, macOS 10.11, *)
-extension LayoutGuide: ConstraintItem {
+/// Preferences
+public struct Preferences {}
+
+
+/// Preferences (Default settings for View)
+public extension Preferences {
     
-    public var dw_superview: ConstraintItem? {
-        return self.owningView
-    }
-    
-    public var dw_hashValue: Int {
-        return self.hashValue
-    }
+    /// translatesAutoresizingMaskIntoConstraints for View
+    static let translatesAutoresizingMaskIntoConstraints: Bool = false
 }
 
 
-/// LayoutGuide (Driftwood)
-@available(iOS 9.0, macOS 10.11, *)
-extension LayoutGuide {
+/// Preferences (Default settings for Constraint)
+public extension Preferences {
     
-    /// driftwood
-    public var dw: Driftwood {
-        return Driftwood(self)
-    }
+    /// relation
+    static let relation: Relation = .equal
+    
+    /// multiply
+    static let multiply: CGFloat = 1.0
+    
+    /// priority (Changeable)
+    static var priority: Priority = .required
 }
+

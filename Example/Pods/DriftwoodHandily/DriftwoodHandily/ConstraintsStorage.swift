@@ -1,5 +1,5 @@
 //
-//  Driftwood
+//  DriftwoodHandily
 //
 //  Copyright (c) 2018-Present wlgemini <wangluguang@live.com>.
 //
@@ -30,7 +30,7 @@ class ConstraintsStorage {
     var labeled: String?
     
     // MARK: Constraint activate & update & deactivate
-    /// active constraint installed by driftwood
+    /// active constraint installed by DriftwoodHandily
     func activeConstraint(for key: Attribute) -> LayoutConstraint? {
         return self._activeConstraints[key]
     }
@@ -48,7 +48,7 @@ class ConstraintsStorage {
         self._activeConstraints[key] = con
     }
     
-    /// update an active constraint installed by driftwood
+    /// update an active constraint installed by DriftwoodHandily
     func update(_ con: LayoutConstraint, constant: CGFloat?, priority: Priority?, location: Debug.Location, operation: Debug.Operation) {
         // set debug info
         con.location = location
@@ -67,7 +67,7 @@ class ConstraintsStorage {
         }
     }
     
-    /// deactivate a constraint installed by driftwood
+    /// deactivate a constraint installed by DriftwoodHandily
     @discardableResult
     func deactivate(for key: Attribute) -> LayoutConstraint? {
         // remove constraint
@@ -79,7 +79,7 @@ class ConstraintsStorage {
         return con
     }
     
-    /// deactivate all constraints installed by driftwood
+    /// deactivate all constraints installed by DriftwoodHandily
     func deactivateAll() {
         // for each constraint
         self._activeConstraints.forEach {
@@ -92,12 +92,12 @@ class ConstraintsStorage {
         self._activeConstraints.removeAll()
     }
     
-    /// dequeue a constraint cached by driftwood
+    /// dequeue a constraint cached by DriftwoodHandily
     func dequeueConstraintFor(item: ConstraintItem, attribute: Attribute, relation: Relation, toItem: ConstraintItem?, toAttribute: Attribute, multiply: CGFloat, constant: CGFloat, priority: Priority) -> LayoutConstraint {
         // 0. generate a constraint hash value (hash calculation not include item/constant/priority)
         var hasher = Hasher()
         hasher.combine(attribute)
-        hasher.combine(toItem?.dw_hashValue)
+        hasher.combine(toItem?.dwh_hashValue)
         hasher.combine(toAttribute)
         hasher.combine(relation)
         hasher.combine(multiply)

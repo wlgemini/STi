@@ -33,9 +33,9 @@ class MyViewController: ViewController {
     }
     
     override func setupLayout() {
-        self.v1.dw.make().left(15).top(10, to: self.view.safeAreaLayoutGuide.dw.top).right(-15).height(55)
-        self.v2.dw.make().left(0).top(0, to: self.v1.dw.bottom).right(0).bottom(0, to: self.v3.dw.top)
-        self.v3.dw.make().left(15).bottom(0, to: self.view.safeAreaLayoutGuide.dw.bottom).right(-15).height(55)
+        self.v1.make().left(15).top(10, to: self.view.safeAreaLayoutGuide.top).right(-15).height(55)
+        self.v2.make().left(0).top(0, to: self.v1.bottom).right(0).bottom(0, to: self.v3.top)
+        self.v3.make().left(15).bottom(0, to: self.view.safeAreaLayoutGuide.bottom).right(-15).height(55)
     }
 }
 

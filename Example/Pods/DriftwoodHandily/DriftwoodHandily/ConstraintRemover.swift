@@ -1,5 +1,5 @@
 //
-//  Driftwood
+//  DriftwoodHandily
 //
 //  Copyright (c) 2018-Present wlgemini <wangluguang@live.com>.
 //
@@ -185,7 +185,7 @@ public struct ConstraintRemover {
     /// remove constraint
     @discardableResult
     private func _remove(for attribute: Attribute) -> ConstraintRemover {
-        // 0. deactivate a constraint installed by driftwood if any
+        // 0. deactivate a constraint installed by DriftwoodHandily if any
         guard let _ = self._item.storage.deactivate(for: attribute) else {
             Debug.log(self._location, .remove(attribute), self._item, message: "No constraint.")
             return self

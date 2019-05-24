@@ -1,5 +1,5 @@
 //
-//  Driftwood
+//  DriftwoodHandily
 //
 //  Copyright (c) 2018-Present wlgemini <wangluguang@live.com>.
 //
@@ -201,7 +201,7 @@ public struct ConstraintMaker {
             }
         }, message: "Attribute is not belong to 'X-axis'.")
         
-        // 1. check if there was a constraint already installed by driftwood
+        // 1. check if there was a constraint already installed by DriftwoodHandily
         guard self._item.storage.activeConstraint(for: attribute) == nil else {
             Debug.log(self._location, .make(attribute), self._item, message: "Duplicated constraint.")
             return self
@@ -213,7 +213,7 @@ public struct ConstraintMaker {
         switch attributeX {
         case .superview:
             // check if there is an superview
-            guard let superview = self._item.dw_superview else {
+            guard let superview = self._item.dwh_superview else {
                 Debug.log(self._location, .make(attribute), self._item, message: "No superview.")
                 return self
             }
@@ -287,7 +287,7 @@ public struct ConstraintMaker {
             }
         }, message: "Attribute is not belong to 'Y-axis'.")
         
-        // 1. check if there was a constraint already installed by driftwood
+        // 1. check if there was a constraint already installed by DriftwoodHandily
         guard self._item.storage.activeConstraint(for: attribute) == nil else {
             Debug.log(self._location, .make(attribute), self._item, message: "Duplicated constraint.")
             return self
@@ -299,7 +299,7 @@ public struct ConstraintMaker {
         switch attributeY {
         case .superview:
             // check if there is an superview
-            guard let superview = self._item.dw_superview else {
+            guard let superview = self._item.dwh_superview else {
                 Debug.log(self._location, .make(attribute), self._item, message: "No superview.")
                 return self
             }
@@ -362,7 +362,7 @@ public struct ConstraintMaker {
             }
         }, message: "Attribute is not belong to 'Size'.")
         
-        // 1. check if there was a constraint already installed by driftwood
+        // 1. check if there was a constraint already installed by DriftwoodHandily
         guard self._item.storage.activeConstraint(for: attribute) == nil else {
             Debug.log(self._location, .make(attribute), self._item, message: "Duplicated constraint.")
             return self

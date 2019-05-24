@@ -3,7 +3,7 @@
 //
 
 import UIKit
-import Driftwood
+import DriftwoodHandily
 
 
 open class TableViewCell: UITableViewCell {

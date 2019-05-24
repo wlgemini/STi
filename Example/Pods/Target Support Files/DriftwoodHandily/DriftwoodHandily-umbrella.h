@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double DriftwoodVersionNumber;
-FOUNDATION_EXPORT const unsigned char DriftwoodVersionString[];
+FOUNDATION_EXPORT double DriftwoodHandilyVersionNumber;
+FOUNDATION_EXPORT const unsigned char DriftwoodHandilyVersionString[];
 

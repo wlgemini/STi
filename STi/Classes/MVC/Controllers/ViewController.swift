@@ -6,7 +6,7 @@ import UIKit
 import PKHUD
 import SwiftyNavigationBar
 import Alamofire
-import Driftwood
+import DriftwoodHandily
 
 open class ViewController: UIViewController {
     

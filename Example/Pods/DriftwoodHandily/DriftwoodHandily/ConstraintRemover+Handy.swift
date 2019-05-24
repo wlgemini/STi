@@ -1,5 +1,5 @@
 //
-//  Driftwood
+//  DriftwoodHandily
 //
 //  Copyright (c) 2018-Present wlgemini <wangluguang@live.com>.
 //
@@ -22,27 +22,40 @@
 //  SOFTWARE.
 
 
-/// Preferences
-public struct Preferences {}
-
-
-/// Preferences (Default settings for View)
-public extension Preferences {
+/// Constraint Remover (Handy)
+public extension ConstraintRemover {
     
-    /// translatesAutoresizingMaskIntoConstraints for View
-    static let translatesAutoresizingMaskIntoConstraints: Bool = false
-}
-
-
-/// Preferences (Default settings for Constraint)
-public extension Preferences {
+    //===========================================
+    // Remove AttributeSize
+    //===========================================
+    //
+    /// size
+    @discardableResult
+    func size() -> ConstraintRemover {
+        self.width()
+        self.height()
+        return self
+    }
     
-    /// relation
-    static let relation: Relation = .equal
+    //===========================================
+    // Make AttributeX & AttributeY
+    //===========================================
+    //
+    /// centerXY
+    @discardableResult
+    func centerXY() -> ConstraintRemover {
+        self.centerX()
+        self.centerY()
+        return self
+    }
     
-    /// multiply
-    static let multiply: CGFloat = 1.0
-    
-    /// priority (Changeable)
-    static var priority: Priority = .required
+    /// edge insets
+    @discardableResult
+    func edge() -> ConstraintRemover {
+        self.leading()
+        self.trailing()
+        self.top()
+        self.bottom()
+        return self
+    }
 }

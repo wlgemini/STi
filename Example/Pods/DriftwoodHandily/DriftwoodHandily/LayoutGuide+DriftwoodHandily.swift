@@ -1,5 +1,5 @@
 //
-//  Driftwood
+//  DriftwoodHandily
 //
 //  Copyright (c) 2018-Present wlgemini <wangluguang@live.com>.
 //
@@ -22,40 +22,15 @@
 //  SOFTWARE.
 
 
-/// Constraint Remover (Handy)
-public extension ConstraintRemover {
+/// LayoutGuide (ConstraintItem)
+@available(iOS 9.0, macOS 10.11, *)
+extension LayoutGuide: ConstraintItem {
     
-    //===========================================
-    // Remove AttributeSize
-    //===========================================
-    //
-    /// size
-    @discardableResult
-    func size() -> ConstraintRemover {
-        self.width()
-        self.height()
-        return self
+    public var dwh_superview: ConstraintItem? {
+        return self.owningView
     }
     
-    //===========================================
-    // Make AttributeX & AttributeY
-    //===========================================
-    //
-    /// centerXY
-    @discardableResult
-    func centerXY() -> ConstraintRemover {
-        self.centerX()
-        self.centerY()
-        return self
-    }
-    
-    /// edge insets
-    @discardableResult
-    func edge() -> ConstraintRemover {
-        self.leading()
-        self.trailing()
-        self.top()
-        self.bottom()
-        return self
+    public var dwh_hashValue: Int {
+        return self.hashValue
     }
 }

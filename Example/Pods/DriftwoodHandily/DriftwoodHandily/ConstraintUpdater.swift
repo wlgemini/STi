@@ -1,5 +1,5 @@
 //
-//  Driftwood
+//  DriftwoodHandily
 //
 //  Copyright (c) 2018-Present wlgemini <wangluguang@live.com>.
 //
@@ -185,7 +185,7 @@ public struct ConstraintUpdater {
     /// update constraint
     @discardableResult
     private func _update(for attribute: Attribute, constant: CGFloat?, priority: Priority?) -> ConstraintUpdater {
-        // 0. check if there was a constraint already installed by driftwood
+        // 0. check if there was a constraint already installed by DriftwoodHandily
         guard let con = self._item.storage.activeConstraint(for: attribute) else {
             Debug.log(self._location, .update(attribute), self._item, message: "No constraint.")
             return self

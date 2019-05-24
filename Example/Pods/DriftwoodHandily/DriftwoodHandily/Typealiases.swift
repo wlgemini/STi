@@ -1,5 +1,5 @@
 //
-//  Driftwood
+//  DriftwoodHandily
 //
 //  Copyright (c) 2018-Present wlgemini <wangluguang@live.com>.
 //
@@ -22,38 +22,58 @@
 //  SOFTWARE.
 
 
-/// ConstraintItem
-public protocol ConstraintItem: AnyObject {
-    
-    /// superview
-    var dw_superview: ConstraintItem? { get }
-    
-    /// hashValue
-    var dw_hashValue: Int { get }
-}
+#if os(iOS) || os(tvOS)
+import UIKit
 
 
-/// ConstraintItem (ConstraintsStorage)
-extension ConstraintItem {
-    
-    /// storage
-    var storage: ConstraintsStorage {
-        if let s = self._storage {
-            return s
-        } else {
-            let s = ConstraintsStorage()
-            self._storage = s
-            return s
-        }
-    }
-    
-    /// _storage
-    var _storage: ConstraintsStorage? {
-        get { return objc_getAssociatedObject(self, &_storageKey) as? ConstraintsStorage }
-        set { objc_setAssociatedObject(self, &_storageKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC) }
-    }
-}
+/// View
+public typealias View = UIView
 
 
-/// _storage Key
-fileprivate var _storageKey: Void?
+/// LayoutGuide
+@available(iOS 9.0, *)
+public typealias LayoutGuide = UILayoutGuide
+
+
+/// Relation
+public typealias Relation = NSLayoutConstraint.Relation
+
+
+/// Priority
+public typealias Priority = UILayoutPriority
+
+
+/// Attribute
+typealias Attribute = NSLayoutConstraint.Attribute
+
+
+/// EdgeInsets
+public typealias EdgeInsets = UIEdgeInsets
+#else
+import AppKit
+
+
+/// View
+public typealias View = NSView
+
+
+/// LayoutGuide
+@available(macOS 10.11, *)
+public typealias LayoutGuide = NSLayoutGuide
+
+
+/// Relation
+public typealias Relation = NSLayoutConstraint.Relation
+
+
+/// Priority
+public typealias Priority = NSLayoutConstraint.Priority
+
+
+/// Attribute
+typealias Attribute = NSLayoutConstraint.Attribute
+
+
+/// EdgeInsets
+public typealias EdgeInsets = NSEdgeInsets
+#endif

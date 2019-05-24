@@ -1,0 +1,6 @@
+framework module DriftwoodHandily {
+  umbrella header "DriftwoodHandily-umbrella.h"
+
+  export *
+  module * { export * }
+}

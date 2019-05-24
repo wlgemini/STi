@@ -1,5 +1,5 @@
 //
-//  Driftwood
+//  DriftwoodHandily
 //
 //  Copyright (c) 2018-Present wlgemini <wangluguang@live.com>.
 //
@@ -22,28 +22,14 @@
 //  SOFTWARE.
 
 
-/// Constraint Updater (Handy)
-public extension ConstraintUpdater {
+/// View (ConstraintItem)
+extension View: ConstraintItem {
     
-    //===========================================
-    // Update AttributeX & AttributeY
-    //===========================================
-    //
-    /// centerXY
-    @discardableResult
-    func centerXY(offsets: CGPoint? = nil, priority: Priority? = nil) -> ConstraintUpdater {
-        self.centerX(offsets?.x, priority: priority)
-        self.centerY(offsets?.y, priority: priority)
-        return self
+    public var dwh_superview: ConstraintItem? {
+        return self.superview
     }
     
-    /// edge
-    @discardableResult
-    func edge(insets: EdgeInsets? = nil, priority: Priority? = nil) -> ConstraintUpdater {
-        self.leading(insets?.left, priority: priority)
-        self.trailing(insets != nil ? -insets!.right : nil, priority: priority)
-        self.top(insets?.top, priority: priority)
-        self.bottom(insets != nil ? -insets!.bottom : nil, priority: priority)
-        return self
+    public var dwh_hashValue: Int {
+        return self.hashValue
     }
 }
