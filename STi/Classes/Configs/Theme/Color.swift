@@ -6,7 +6,7 @@ import UIKit
 
 
 /// Color
-struct Color {
+public struct Color {
     
     /// 8-bit color
     ///
@@ -36,6 +36,6 @@ struct Color {
     
     /// Random color
     public static func random() -> UIColor {
-        return Color.rgba255(CGFloat.random(in: 0...255), CGFloat.random(in: 0...255), CGFloat.random(in: 0...255), 1)
+        return Color.rgba255(CGFloat.random(in: 0...255), CGFloat.random(in: 0...255), CGFloat.random(in: 0...255), 255)
     }
 }

@@ -6,20 +6,20 @@ import UIKit
 import Driftwood
 
 
-class CollectionViewCell: UICollectionViewCell {
-    override init(frame: CGRect) {
+open class CollectionViewCell: UICollectionViewCell {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         self.setupStyle()
         self.setupLayout()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     /// setup style
-    func setupStyle() {}
+    open func setupStyle() {}
     
     /// setup layout
-    func setupLayout() {}
+    open func setupLayout() {}
 }

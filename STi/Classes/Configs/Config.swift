@@ -3,4 +3,4 @@
 //
 
 
-struct Config {}
+public struct Config {}

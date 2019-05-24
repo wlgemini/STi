@@ -3,4 +3,4 @@
 //
 
 
-struct Api {}
+public struct Api {}

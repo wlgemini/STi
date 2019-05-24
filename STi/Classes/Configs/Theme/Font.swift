@@ -6,7 +6,7 @@ import UIKit
 
 
 /// Font
-struct Font {
+public struct Font {
     
     /// systemFont.ultraLight
     public static func ult(_ size: CGFloat) -> UIFont {

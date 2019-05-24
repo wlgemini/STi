@@ -25,7 +25,7 @@ open class ViewController: UIViewController {
     open func didSetup() {}
     
     /// init
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+    public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
         self.willConfig()
@@ -33,7 +33,7 @@ open class ViewController: UIViewController {
     }
     
     /// init
-    required public init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     

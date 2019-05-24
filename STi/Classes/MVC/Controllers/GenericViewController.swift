@@ -6,7 +6,7 @@
 open class GenericViewController<ContentView: UIView>: ViewController {
     
     /// contentView
-    var contentView: ContentView!
+    public var contentView: ContentView!
     
     /// loadView
     open override func loadView() {

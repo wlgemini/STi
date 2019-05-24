@@ -5,14 +5,14 @@
 import UIKit
 
 
-class Window: UIWindow {
+open class Window: UIWindow {
     
     // MARK: - Public
     /// window一些事件的代理，之所以叫windowDelegate是因为window有一个私有的delegate属性，重名了
-    weak var windowDelegate: WindowDelegate?
+    public weak var windowDelegate: WindowDelegate?
     
     /// 是否被别的window覆盖了
-    var isCovered: Bool {
+    public var isCovered: Bool {
         let keys = Window._map.keys
         for key in keys {
             if key > self.windowLevel { return true }
@@ -22,14 +22,14 @@ class Window: UIWindow {
     
     
     /// create window
-    static func createWindow(for level: UIWindow.Level) -> Window {
+    public static func createWindow(for level: UIWindow.Level) -> Window {
         var targetWin = self._map[level]
         
         if targetWin == nil {
             // 通知delegate们(不含targetWin)
             self._map.values.forEach { (win) in
                 if targetWin != win {
-                    win.windowDelegate?.window(window: win, willCreateWindowForLevel: level)
+                    win.windowDelegate?.window(win, willCreateWindowForLevel: level)
                 }
             }
             
@@ -46,7 +46,7 @@ class Window: UIWindow {
             // 通知delegate们(不含targetWin)
             self._map.values.forEach { (win) in
                 if targetWin != win {
-                    win.windowDelegate?.window(window: win, didCreateWindowForLevel: level)
+                    win.windowDelegate?.window(win, didCreateWindowForLevel: level)
                 }
             }
         }
@@ -55,18 +55,18 @@ class Window: UIWindow {
     }
     
     /// get window
-    static func getWindow(for level: UIWindow.Level) -> Window? {
+    public static func getWindow(for level: UIWindow.Level) -> Window? {
         return self._map[level]
     }
     
     /// remove window
     @discardableResult
-    static func removeWindow(for level: UIWindow.Level) -> Window? {
+    public static func removeWindow(for level: UIWindow.Level) -> Window? {
         if let targetWin = self._map[level] {
             // 通知delegate们(不含targetWin)
             self._map.values.forEach { (win) in
                 if targetWin != win {
-                    win.windowDelegate?.window(window: win, willRemoveWindowForLevel: level)
+                    win.windowDelegate?.window(win, willRemoveWindowForLevel: level)
                 }
             }
             
@@ -78,7 +78,7 @@ class Window: UIWindow {
             // 通知delegate们(不含targetWin)
             self._map.values.forEach { (win) in
                 if targetWin != win {
-                    win.windowDelegate?.window(window: win, didRemoveWindowForLevel: level)
+                    win.windowDelegate?.window(win, didRemoveWindowForLevel: level)
                 }
             }
             return targetWin
@@ -88,12 +88,12 @@ class Window: UIWindow {
         }
     }
     
-    static func makeKeyAndVisibleWindow(for level: UIWindow.Level, visible: Bool) {
+    public static func makeKeyAndVisibleWindow(for level: UIWindow.Level, visible: Bool) {
         if let targetWin = self._map[level] {
             // 通知delegate们(不含targetWin)
             self._map.values.forEach { (win) in
                 if targetWin != win {
-                    win.windowDelegate?.window(window: win, willMakeKeyAndVisibleWindow: level)
+                    win.windowDelegate?.window(win, willMakeKeyAndVisible: visible, forLevel: level)
                 }
             }
             
@@ -107,7 +107,7 @@ class Window: UIWindow {
             // 通知delegate们(不含targetWin)
             self._map.values.forEach { (win) in
                 if targetWin != win {
-                    win.windowDelegate?.window(window: win, didMakeKeyAndVisibleWindow: level)
+                    win.windowDelegate?.window(win, didMakeKeyAndVisible: visible, forLevel: level)
                 }
             }
         }
@@ -118,25 +118,25 @@ class Window: UIWindow {
 }
 
 
-protocol WindowDelegate: class {
-    func window(window: Window, willCreateWindowForLevel level: UIWindow.Level)
-    func window(window: Window, didCreateWindowForLevel level: UIWindow.Level)
+public protocol WindowDelegate: class {
+    func window(_ window: Window, willCreateWindowForLevel level: UIWindow.Level)
+    func window(_ window: Window, didCreateWindowForLevel level: UIWindow.Level)
     
-    func window(window: Window, willRemoveWindowForLevel level: UIWindow.Level)
-    func window(window: Window, didRemoveWindowForLevel level: UIWindow.Level)
+    func window(_ window: Window, willRemoveWindowForLevel level: UIWindow.Level)
+    func window(_ window: Window, didRemoveWindowForLevel level: UIWindow.Level)
     
-    func window(window: Window, willMakeKeyAndVisibleWindow level: UIWindow.Level)
-    func window(window: Window, didMakeKeyAndVisibleWindow level: UIWindow.Level)
+    func window(_ window: Window, willMakeKeyAndVisible: Bool, forLevel level: UIWindow.Level)
+    func window(_ window: Window, didMakeKeyAndVisible: Bool, forLevel level: UIWindow.Level)
 }
 
-extension WindowDelegate {
-    func window(window: Window, willCreateWindowForLevel level: UIWindow.Level) {}
-    func window(window: Window, didCreateWindowForLevel level: UIWindow.Level) {}
+public extension WindowDelegate {
+    func window(_ window: Window, willCreateWindowForLevel level: UIWindow.Level) {}
+    func window(_ window: Window, didCreateWindowForLevel level: UIWindow.Level) {}
     
-    func window(window: Window, willRemoveWindowForLevel level: UIWindow.Level) {}
-    func window(window: Window, didRemoveWindowForLevel level: UIWindow.Level) {}
+    func window(_ window: Window, willRemoveWindowForLevel level: UIWindow.Level) {}
+    func window(_ window: Window, didRemoveWindowForLevel level: UIWindow.Level) {}
     
-    func window(window: Window, willMakeKeyAndVisibleWindow level: UIWindow.Level) {}
-    func window(window: Window, didMakeKeyAndVisibleWindow level: UIWindow.Level) {}
+    func window(_ window: Window, willMakeKeyAndVisible: Bool, forLevel level: UIWindow.Level) {}
+    func window(_ window: Window, didMakeKeyAndVisible: Bool, forLevel level: UIWindow.Level) {}
 }
 

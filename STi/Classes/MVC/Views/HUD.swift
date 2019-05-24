@@ -5,7 +5,7 @@
 import PKHUD
 
 
-struct HUD {
+public struct HUD {
     
     /// Show an auto-hidden message
     public static func message(_ msg: String, onView: UIView? = nil, width: CGFloat = 250.0, completion: ((Bool) -> Void)? = nil) {
