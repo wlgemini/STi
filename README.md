@@ -8,7 +8,7 @@ Swift templet for iOS app.
 source 'https://github.com/CocoaPods/Specs.git'
 source 'https://github.com/wlgemini/Specs.git'
 
-target 'MySTi' do
+target 'MyApp' do
   use_frameworks!
 
   pod 'STi'
