@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name                    = "STi"
-  s.version                 = "1.0.0"
+  s.version                 = "1.0.1"
   s.summary                 = "Swift template for iOS app."
   s.homepage                = "https://github.com/wlgemini/STi"
   s.license                 = { :type => "MIT", :file => "LICENSE" }
