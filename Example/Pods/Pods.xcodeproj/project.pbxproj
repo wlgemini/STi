@@ -134,6 +134,7 @@
 		C2D3A1862B86D6500AE42CD624F01B64 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26FFA1133D27A215A7814D1515856601 /* UIKit.framework */; };
 		C71F622959DB9347A0718FB547050909 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118D7EF724DDB8CB43BE9301F645119A /* Typealiases.swift */; };
 		C885658BCA5E858818BB383FBC6DE3EF /* PKHUDSystemActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3E9D046AD7D616DDFBA60F801EFF71 /* PKHUDSystemActivityIndicatorView.swift */; };
+		CA7B5B75229D073D0027DFF4 /* QRCodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7B5B74229D073D0027DFF4 /* QRCodeScannerView.swift */; };
 		CD010EE7F3292689A68554C04F8B2758 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A06F54755F42F66500102C89450FA0E /* Resource.swift */; };
 		CE7B4FF230C82BD1570199DD1B3312B9 /* GIFAnimatedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE22E306576EC8AC65F9A0457DB5934 /* GIFAnimatedImage.swift */; };
 		CF67AF5E36D3959B460B64170524E973 /* STi-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 87BC15699B615297CC486B719F82FAAC /* STi-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -399,6 +400,7 @@
 		C192C22A682966A5D6CA29FEAF6B1963 /* PKHUDWideBaseView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKHUDWideBaseView.swift; path = PKHUD/PKHUDWideBaseView.swift; sourceTree = "<group>"; };
 		C1E3CBC34475763C6E281DA0B90E2614 /* PKHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PKHUD-umbrella.h"; sourceTree = "<group>"; };
 		C595B97EE0F6FF590A7C8441C771C3E4 /* PKHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PKHUD-prefix.pch"; sourceTree = "<group>"; };
+		CA7B5B74229D073D0027DFF4 /* QRCodeScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerView.swift; sourceTree = "<group>"; };
 		CBB2BEA241B4FA5298097FD5E2666608 /* LayoutGuide+DriftwoodHandily.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LayoutGuide+DriftwoodHandily.swift"; path = "DriftwoodHandily/LayoutGuide+DriftwoodHandily.swift"; sourceTree = "<group>"; };
 		CBB97610135198BED1F62FE86C59FD5F /* Window.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Window.swift; path = PKHUD/Window.swift; sourceTree = "<group>"; };
 		CCE22E306576EC8AC65F9A0457DB5934 /* GIFAnimatedImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GIFAnimatedImage.swift; path = Sources/Image/GIFAnimatedImage.swift; sourceTree = "<group>"; };
@@ -611,6 +613,7 @@
 				FFA13DF1C193E608BEA6C84B89CF48B2 /* TableViewCell.swift */,
 				422875E75D3E775DBE941D9E253B3D95 /* View.swift */,
 				5D8C9A2B59C30D951785E03420D6E698 /* Window.swift */,
+				CA7B5B74229D073D0027DFF4 /* QRCodeScannerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1299,6 +1302,7 @@
 				81B9788AB34AFD28209B71D1D2F9DF16 /* STi-dummy.m in Sources */,
 				83887C79594868B1DFC6A006A610B484 /* TableViewCell.swift in Sources */,
 				007692DB8AEE5E8657E52CD9778F0A02 /* UIColor+.swift in Sources */,
+				CA7B5B75229D073D0027DFF4 /* QRCodeScannerView.swift in Sources */,
 				18F0E3CF3AC46223001C56A1EC50F873 /* UIDevice+.swift in Sources */,
 				09C57353C50A584123BEE2945BA52F39 /* UIRefreshControl+.swift in Sources */,
 				8166577383685F2FEACCA9A0F96A3B66 /* UIScrollView+.swift in Sources */,

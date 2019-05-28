@@ -18,17 +18,17 @@ public struct Util {
     }
     
     /// Async in main-queue
-    public func asyncInMain(execute work: @escaping () -> Void) {
+    public static func asyncInMain(execute work: @escaping () -> Void) {
         DispatchQueue.main.async(execute: work)
     }
     
     /// Async in main-queue after
-    public func asyncInMainAfter(_ after: TimeInterval, execute work: @escaping () -> Void) {
+    public static func asyncInMainAfter(_ after: TimeInterval, execute work: @escaping () -> Void) {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + after, execute: work)
     }
     
     /// Async in global-queue
-    public func asyncInGlobal(execute work: @escaping () -> Void) {
+    public static func asyncInGlobal(execute work: @escaping () -> Void) {
         DispatchQueue.global().async(execute: work)
     }
     
