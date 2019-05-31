@@ -135,6 +135,11 @@
 		C71F622959DB9347A0718FB547050909 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118D7EF724DDB8CB43BE9301F645119A /* Typealiases.swift */; };
 		C885658BCA5E858818BB383FBC6DE3EF /* PKHUDSystemActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3E9D046AD7D616DDFBA60F801EFF71 /* PKHUDSystemActivityIndicatorView.swift */; };
 		CA7B5B75229D073D0027DFF4 /* QRCodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7B5B74229D073D0027DFF4 /* QRCodeScannerView.swift */; };
+		CAD6543722A138F8004A58AA /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD6543622A138F8004A58AA /* UITableView+.swift */; };
+		CAD6543922A139DE004A58AA /* UITableViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD6543822A139DE004A58AA /* UITableViewCell+.swift */; };
+		CAD6543B22A13A07004A58AA /* UICollectionViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD6543A22A13A07004A58AA /* UICollectionViewCell+.swift */; };
+		CAD6543D22A13A20004A58AA /* UICollectionReusableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD6543C22A13A20004A58AA /* UICollectionReusableView+.swift */; };
+		CAD6544122A13B6C004A58AA /* UITableViewHeaderFooterView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD6544022A13B6C004A58AA /* UITableViewHeaderFooterView+.swift */; };
 		CD010EE7F3292689A68554C04F8B2758 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A06F54755F42F66500102C89450FA0E /* Resource.swift */; };
 		CE7B4FF230C82BD1570199DD1B3312B9 /* GIFAnimatedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE22E306576EC8AC65F9A0457DB5934 /* GIFAnimatedImage.swift */; };
 		CF67AF5E36D3959B460B64170524E973 /* STi-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 87BC15699B615297CC486B719F82FAAC /* STi-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -401,6 +406,12 @@
 		C1E3CBC34475763C6E281DA0B90E2614 /* PKHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PKHUD-umbrella.h"; sourceTree = "<group>"; };
 		C595B97EE0F6FF590A7C8441C771C3E4 /* PKHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PKHUD-prefix.pch"; sourceTree = "<group>"; };
 		CA7B5B74229D073D0027DFF4 /* QRCodeScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerView.swift; sourceTree = "<group>"; };
+		CAD6543622A138F8004A58AA /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
+		CAD6543822A139DE004A58AA /* UITableViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+.swift"; sourceTree = "<group>"; };
+		CAD6543A22A13A07004A58AA /* UICollectionViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+.swift"; sourceTree = "<group>"; };
+		CAD6543C22A13A20004A58AA /* UICollectionReusableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionReusableView+.swift"; sourceTree = "<group>"; };
+		CAD6543E22A13B3D004A58AA /* UITableViewHeaderFooterView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewHeaderFooterView+.swift"; sourceTree = "<group>"; };
+		CAD6544022A13B6C004A58AA /* UITableViewHeaderFooterView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewHeaderFooterView+.swift"; sourceTree = "<group>"; };
 		CBB2BEA241B4FA5298097FD5E2666608 /* LayoutGuide+DriftwoodHandily.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LayoutGuide+DriftwoodHandily.swift"; path = "DriftwoodHandily/LayoutGuide+DriftwoodHandily.swift"; sourceTree = "<group>"; };
 		CBB97610135198BED1F62FE86C59FD5F /* Window.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Window.swift; path = PKHUD/Window.swift; sourceTree = "<group>"; };
 		CCE22E306576EC8AC65F9A0457DB5934 /* GIFAnimatedImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GIFAnimatedImage.swift; path = Sources/Image/GIFAnimatedImage.swift; sourceTree = "<group>"; };
@@ -626,9 +637,14 @@
 				9631C7E6F1C7BA9D0D27A558D2B8F5DB /* UIDevice+.swift */,
 				B729D23BDCB0ED033418CE872B66B4B4 /* UIRefreshControl+.swift */,
 				9B12A5A336D547CA41D78199510BDF1B /* UIScrollView+.swift */,
+				CAD6543622A138F8004A58AA /* UITableView+.swift */,
 				2B0366CF5A13538B6DD952BD4198652D /* UIView+CreateSubView.swift */,
 				3D854358DC519FA99A691CCB41882232 /* Util.swift */,
 				C691FF67FA5916ACABE80251C1FC174A /* Network */,
+				CAD6543822A139DE004A58AA /* UITableViewCell+.swift */,
+				CAD6544022A13B6C004A58AA /* UITableViewHeaderFooterView+.swift */,
+				CAD6543A22A13A07004A58AA /* UICollectionViewCell+.swift */,
+				CAD6543C22A13A20004A58AA /* UICollectionReusableView+.swift */,
 			);
 			name = Util;
 			path = STi/Classes/Util;
@@ -842,6 +858,7 @@
 		C691FF67FA5916ACABE80251C1FC174A /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				CAD6543E22A13B3D004A58AA /* UITableViewHeaderFooterView+.swift */,
 				CE31E57F88D24A14AB5B4CE5607D7EEE /* DataStructure.swift */,
 				5396A231F832274A6ACCAEBD63E52C2F /* Network.swift */,
 				FD08BEDD7571E68FE9072F16852E998F /* Request.swift */,
@@ -1286,14 +1303,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				F292970AA57B8B8CD9CF3D92A12CC348 /* Api.swift in Sources */,
+				CAD6543D22A13A20004A58AA /* UICollectionReusableView+.swift in Sources */,
 				998376708904E03CBDFF17A96B92C915 /* CollectionReusableView.swift in Sources */,
 				032CC0FA53CD41F06573EE28B7D5FE80 /* CollectionViewCell.swift in Sources */,
+				CAD6543722A138F8004A58AA /* UITableView+.swift in Sources */,
 				2AEE485507C292D25B7292AC06ECA117 /* Color.swift in Sources */,
 				32540CC66D2024320EA0ED8C7FA2BF09 /* Config.swift in Sources */,
 				8CE8DF2563C3258592A19622651EBB5E /* CountDownButton.swift in Sources */,
 				304F9D98864A9A793D72049D76677075 /* DataStructure.swift in Sources */,
 				9B527BEF7B1CD8C8F00F52D27D88D454 /* DateFormatter+.swift in Sources */,
+				CAD6543922A139DE004A58AA /* UITableViewCell+.swift in Sources */,
 				B777C2EB6B39930E6D22D98169D4CF5A /* EdgeInsetsLabel.swift in Sources */,
+				CAD6544122A13B6C004A58AA /* UITableViewHeaderFooterView+.swift in Sources */,
 				5BD1895771F451221FD9991476CE3510 /* Font.swift in Sources */,
 				6678C396641655E5B5ED6A700B7C8DF1 /* GenericViewController.swift in Sources */,
 				AC034FC970E39A0292826C64327A1CDF /* HUD.swift in Sources */,
@@ -1308,6 +1329,7 @@
 				8166577383685F2FEACCA9A0F96A3B66 /* UIScrollView+.swift in Sources */,
 				8D14077EDB04A9A0CC9AC0093391A6C6 /* UIView+CreateSubView.swift in Sources */,
 				F14CE3A56608D6E1995B9A977D451692 /* Util.swift in Sources */,
+				CAD6543B22A13A07004A58AA /* UICollectionViewCell+.swift in Sources */,
 				092B4ED67B6F2A41488EB9A652937EEC /* View.swift in Sources */,
 				42E289E17ECF7FFD6CE6964741841670 /* ViewController.swift in Sources */,
 				317F318501226E8CB911301DC0DCBB32 /* Window.swift in Sources */,

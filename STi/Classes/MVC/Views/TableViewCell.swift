@@ -24,10 +24,3 @@ open class TableViewCell: UITableViewCell {
     /// setup layout
     open func setupLayout() {}
 }
-
-
-extension TableViewCell {
-    
-    /// reuseIdentifier
-    public static var reuseIdentifier: String { return String(describing: self) }
-}

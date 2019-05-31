@@ -25,10 +25,3 @@ open class CollectionReusableView: UICollectionReusableView {
     open func setupLayout() {}
 }
 
-
-extension UICollectionReusableView {
-    
-    /// reuseIdentifier
-    public static var reuseIdentifier: String { return String(describing: self) }
-}
-
