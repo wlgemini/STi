@@ -410,7 +410,6 @@
 		CAD6543822A139DE004A58AA /* UITableViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+.swift"; sourceTree = "<group>"; };
 		CAD6543A22A13A07004A58AA /* UICollectionViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+.swift"; sourceTree = "<group>"; };
 		CAD6543C22A13A20004A58AA /* UICollectionReusableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionReusableView+.swift"; sourceTree = "<group>"; };
-		CAD6543E22A13B3D004A58AA /* UITableViewHeaderFooterView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewHeaderFooterView+.swift"; sourceTree = "<group>"; };
 		CAD6544022A13B6C004A58AA /* UITableViewHeaderFooterView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewHeaderFooterView+.swift"; sourceTree = "<group>"; };
 		CBB2BEA241B4FA5298097FD5E2666608 /* LayoutGuide+DriftwoodHandily.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LayoutGuide+DriftwoodHandily.swift"; path = "DriftwoodHandily/LayoutGuide+DriftwoodHandily.swift"; sourceTree = "<group>"; };
 		CBB97610135198BED1F62FE86C59FD5F /* Window.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Window.swift; path = PKHUD/Window.swift; sourceTree = "<group>"; };
@@ -858,7 +857,6 @@
 		C691FF67FA5916ACABE80251C1FC174A /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				CAD6543E22A13B3D004A58AA /* UITableViewHeaderFooterView+.swift */,
 				CE31E57F88D24A14AB5B4CE5607D7EEE /* DataStructure.swift */,
 				5396A231F832274A6ACCAEBD63E52C2F /* Network.swift */,
 				FD08BEDD7571E68FE9072F16852E998F /* Request.swift */,
