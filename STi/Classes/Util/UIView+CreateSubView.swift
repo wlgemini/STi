@@ -10,6 +10,7 @@ extension UIView {
     /// Create subview
     public func createSubview<V: UIView>() -> V? {
         let v = V(frame: .zero)
+        v.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(v)
         return v
     }
@@ -17,6 +18,7 @@ extension UIView {
     /// Create sub UITableView
     public func createSubTableView(style: UITableView.Style = .plain) -> UITableView {
         let v = UITableView(frame: CGRect.zero, style: style)
+        v.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(v)
         return v
     }
@@ -29,6 +31,7 @@ extension UIView {
         }()) -> UICollectionView {
         
         let v = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
+        v.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(v)
         return v
     }
@@ -53,6 +56,7 @@ extension UIStackView {
     /// - Returns: New generic-type view
     public func createArrangedView<V: UIView>() -> V? {
         let v = V()
+        v.translatesAutoresizingMaskIntoConstraints = false
         self.addArrangedSubview(v)
         return v
     }
