@@ -17,7 +17,7 @@ public struct Network {
     /// timeout
     public static var timeoutIntervalForRequest: TimeInterval = 15
     
-    /// network error handler: [ErrorCode: Handler]
+    /// network error handler
     public static var networkErrorHandler: (Error) -> Void = { _ in }
     
     // MARK: - Private
