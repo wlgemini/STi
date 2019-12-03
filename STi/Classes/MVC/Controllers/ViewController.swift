@@ -30,6 +30,7 @@ open class ViewController: UIViewController {
         
         self.willConfig()
         self.config()
+        self.didConfig()
     }
     
     /// init
